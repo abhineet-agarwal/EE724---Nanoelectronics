@@ -16,7 +16,6 @@ This project analyzes Band-to-Band Tunneling (BTBT) in Silicon-On-Insulator (SOI
 
 - **Abhineet Agarwal**
 - **Harsh Pujare**
-- **Kushagra Gehlot**
 
 **Mentor:** Jay Sonawane
 
