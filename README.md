@@ -2,6 +2,12 @@
 
 Optimization of BTBT current in Partially-Depleted and Fully-Depleted SOI MOSFETs for neuromorphic computing applications using Synopsys Sentaurus TCAD.
 
+<p align="center">
+  <img src="images/btbt_pdsoi_schematic.png" alt="PD-SOI MOSFET BTBT Mechanism" width="45%">
+  <img src="images/btbt_inverter_circuit.png" alt="FD-SOI BTBT Inverter Circuit" width="35%">
+</p>
+<p align="center"><em>Left: Energy band diagram showing BTBT mechanism—electrons tunnel from body to drain, accumulating holes. Right: BTBT inverter circuit schematic.</em></p>
+
 ## 📋 Project Overview
 
 This project analyzes Band-to-Band Tunneling (BTBT) in Silicon-On-Insulator (SOI) MOSFETs to optimize device parameters for ultra-low power neuromorphic hardware implementations. The study focuses on both minimizing and maximizing BTBT current for different applications in Spiking Neural Networks (SNNs).
@@ -75,6 +81,12 @@ Neuromorphic computing architectures based on Spiking Neural Networks (SNNs) req
    - **Critical Finding:** Lower N_CH and N_SD significantly reduce BTBT current
    - Higher doping reduces depletion width → steeper energy band profile → shorter tunnel lengths → higher BTBT current
 
+<p align="center">
+  <img src="images/btbt_nch_variation.png" alt="Channel Doping Variation" width="45%">
+  <img src="images/btbt_nsd_variation.png" alt="S/D Doping Variation" width="45%">
+</p>
+<p align="center"><em>Left: I-V curves at different channel doping (N_CH). Right: I-V curves at different S/D doping (N_SD). Lower doping dramatically reduces tunneling current.</em></p>
+
 3. **Optimal Parameters for Low BTBT:**
    - Low L_OV
    - Low N_SD
@@ -87,12 +99,22 @@ Neuromorphic computing architectures based on Spiking Neural Networks (SNNs) req
    - **N_CH = 1×10¹⁷ cm⁻³**
    - Represents maximum achievable BTBT current before convergence issues
 
+<p align="center">
+  <img src="images/btbt_optimal_design.png" alt="Optimal Design" width="45%">
+</p>
+<p align="center"><em>Finding the optimal design—maximum BTBT current achieved at L_OV = 1.4 nm and N_CH = 10¹⁷ cm⁻³.</em></p>
+
 2. **Parameter Sensitivities:**
    - Increasing L_OV: Slight increase in BTBT current
    - Increasing N_CH: Large increase in BTBT current
    - N_SD already at maximum (10²⁰ cm⁻³) in base design
 
 ### Temperature Analysis
+
+<p align="center">
+  <img src="images/btbt_temperature.png" alt="Temperature Dependence" width="45%">
+</p>
+<p align="center"><em>Temperature variability for 32nm PD-SOI: plots at 300 K (blue), 358 K (green), and 398 K (red).</em></p>
 
 - **Regular and substantial increase** in BTBT current with increasing temperature (300 K → 398 K)
 - Physical mechanism: Higher temperature → reduced bandgap → increased tunneling probability
